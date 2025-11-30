@@ -30,13 +30,23 @@ export const Contact = () => {
     try {
       const validatedData = contactSchema.parse(formData);
       
-      // Here you would typically send the data to a backend
-      // For now, we'll just show a success message
+      // Note: Email functionality requires backend setup
+      // Messages are currently simulated. To enable actual email sending:
+      // 1. Set up Lovable Cloud
+      // 2. Configure Resend API with RESEND_API_KEY
+      // 3. Create an edge function to send emails to contact@verdona.org
+      
       await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
       
+      console.log("Contact form submission:", {
+        ...validatedData,
+        timestamp: new Date().toISOString(),
+        destination: "contact@verdona.org"
+      });
+      
       toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting Verdona. We'll get back to you soon.",
+        title: "Message Received!",
+        description: "Thank you for contacting Verdona. We'll get back to you soon at contact@verdona.org",
       });
       
       setFormData({

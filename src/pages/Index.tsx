@@ -5,6 +5,7 @@ import { Products } from "@/components/Products";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const Index = () => {
   const contactRef = useRef<HTMLDivElement>(null);
@@ -23,6 +24,7 @@ const Index = () => {
         <Contact />
       </div>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
