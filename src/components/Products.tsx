@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import oil600 from "@/assets/product-oil-600.jpg";
-import oil1200 from "@/assets/product-oil-1200.jpg";
-import oilFull from "@/assets/product-oil-full.jpg";
-import capsules from "@/assets/product-capsules.jpg";
-import spray from "@/assets/product-spray.jpg";
-import topical from "@/assets/product-topical.jpg";
+import remederiOil1 from "@/assets/remederi-oil-1.jpg";
+import remederiOil2 from "@/assets/remederi-oil-2.jpg";
+import remederiOil3 from "@/assets/remederi-oil-3.jpg";
+import remederiGummy from "@/assets/remederi-gummy.jpg";
 
 interface Product {
   id: string;
@@ -18,46 +16,32 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: "oil-600",
-    name: "CBD Oil 600mg",
-    description: "Carefully formulated 600mg tincture to support your daily wellness routine.",
-    image: oil600,
-    details: "Our 600mg CBD oil is crafted with organic hemp extract and MCT oil carrier for optimal absorption. Designed to promote a sense of calm and contribute to your overall well-being as part of a balanced lifestyle. Each bottle contains approximately 60 servings. Third-party lab tested for quality and purity.",
+    id: "remederi-oil-3600",
+    name: "REUNI CBD Oil 3600mg",
+    description: "Premium full-spectrum CBD oil with 120mg/ml concentration and <0.3% THC.",
+    image: remederiOil1,
+    details: "REUNI CBD Oil 3600mg features a 50:1 CBD to THC ratio with full-spectrum benefits. Each 30ml bottle contains 3600mg of premium CBD at 120mg/ml concentration. Manufactured in the USA with USDA Organic, GMP, FDA, and ISO certifications. Third-party lab tested with Certificate of Analysis (COA) included with each batch.",
   },
   {
-    id: "oil-1200",
-    name: "CBD Oil 1200mg",
-    description: "Enhanced potency formula for those seeking more pronounced daily support.",
-    image: oil1200,
-    details: "Our 1200mg formula delivers consistent, reliable support with premium full-spectrum CBD extract. May help promote relaxation and contribute to a sense of balance in your daily routine. Ideal for experienced CBD users. Contains 60 servings per bottle. Includes Certificate of Analysis (COA) with each purchase.",
+    id: "remederi-oil-3600-broad",
+    name: "REUNI CBD Oil 3600mg - Broad Spectrum",
+    description: "Zero THC broad-spectrum formula with 120mg/ml CBD concentration.",
+    image: remederiOil2,
+    details: "REUNI Broad Spectrum CBD Oil delivers 3600mg of pure CBD without any THC. Perfect for those requiring zero THC in their wellness routine. Features 120mg/ml concentration in a convenient 30ml bottle. Certified by USDA Organic, GMP, FDA, and ISO standards. Includes full Certificate of Analysis (COA) for quality assurance.",
   },
   {
-    id: "oil-full",
-    name: "Full Spectrum CBD Oil 10%",
-    description: "Premium full-spectrum formula harnessing the natural synergy of hemp compounds.",
-    image: oilFull,
-    details: "Our 10% full-spectrum CBD oil combines CBD with other naturally occurring cannabinoids and terpenes found in hemp, creating what's known as the entourage effect. Recommended for experienced users looking to incorporate CBD into their wellness regimen. All products comply with federal hemp regulations (≤0.3% THC). Lab results available upon request.",
+    id: "remederi-oil-7200",
+    name: "REUNI CBD Oil 7200mg - Isolate",
+    description: "Maximum potency CBD isolate with 240mg/ml concentration and 0% THC.",
+    image: remederiOil3,
+    details: "REUNI's most concentrated formula features pure CBD isolate at 240mg/ml, delivering 7200mg total CBD per 30ml bottle. Zero THC for complete peace of mind. Ideal for experienced users seeking maximum potency. Manufactured with the highest quality standards including USDA Organic, GMP, FDA, and ISO certifications. Complete COA documentation provided.",
   },
   {
-    id: "capsules",
-    name: "CBD Capsules",
-    description: "Pre-measured doses for consistent daily wellness support on the go.",
-    image: capsules,
-    details: "Easy-to-swallow softgel capsules provide precise, consistent dosing without measuring. Each capsule contains 25mg of premium CBD isolate, making it simple to maintain your wellness routine. Perfect for busy lifestyles, travel, or those who prefer a tasteless option. 30 capsules per bottle. Formulated for easy integration into any daily routine.",
-  },
-  {
-    id: "spray",
-    name: "CBD Oral Spray",
-    description: "Convenient sublingual spray for efficient absorption and easy dosing.",
-    image: spray,
-    details: "Our oral spray format allows for quick sublingual absorption and convenient dosing throughout your day. Mint-flavored for a refreshing experience. Each spray delivers approximately 5mg CBD. Contains 100 sprays per bottle. Discreet and portable—take it anywhere you need support for your wellness goals.",
-  },
-  {
-    id: "topical",
-    name: "CBD Topical Cream",
-    description: "Nourishing cream infused with CBD and natural botanicals for skin wellness.",
-    image: topical,
-    details: "Our luxurious topical cream combines CBD with nourishing botanicals including shea butter, aloe vera, and arnica. Formulated to support skin health and provide a soothing experience. Apply directly to desired areas as part of your self-care routine. 2oz jar provides approximately 30 applications. For external use only.",
+    id: "remederi-gummy",
+    name: "REUNI Full Spectrum Gummies",
+    description: "Delicious passion fruit gummies with balanced cannabinoid profile.",
+    image: remederiGummy,
+    details: "Each gummy contains 30mg CBD, 5mg Δ9-THC, 5mg CBC, and 5mg CBG for comprehensive wellness support. Passion fruit flavor makes daily supplementation enjoyable. 30 individually sealed units per package. Full-spectrum formula provides entourage effect benefits. Certified by USDA Organic, GMP, FDA, and ISO. Complete lab testing with COA available.",
   },
 ];
 
