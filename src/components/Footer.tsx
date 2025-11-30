@@ -1,7 +1,18 @@
+import trustSeals from "@/assets/trust-seals-banner.jpg";
+
 export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4 max-w-6xl">
+        {/* Trust Seals Banner */}
+        <div className="mb-12 flex justify-center">
+          <img 
+            src={trustSeals} 
+            alt="Verdona compliance certifications: FDACS Hemp Licensed, COA Certified, ISO 9001, cbdMD and Remederi brands" 
+            className="max-w-4xl w-full h-auto rounded-lg"
+          />
+        </div>
+        
         {/* Main Footer Content */}
         <div className="text-center space-y-6 mb-12">
           <h3 className="text-3xl font-playfair font-bold">Verdona</h3>
