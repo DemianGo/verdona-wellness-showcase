@@ -64,11 +64,11 @@ export const Products = () => {
               key={product.id}
               className="bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 hover:-translate-y-1 group"
             >
-              <div className="aspect-square overflow-hidden bg-secondary/20">
+              <div className="aspect-square overflow-hidden bg-secondary/20 flex items-center justify-center p-4">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
@@ -98,11 +98,11 @@ export const Products = () => {
           </DialogHeader>
           {selectedProduct && (
             <div className="space-y-6">
-              <div className="aspect-video w-full overflow-hidden rounded-lg bg-secondary/20">
+              <div className="aspect-video w-full overflow-hidden rounded-lg bg-secondary/20 flex items-center justify-center p-8">
                 <img
                   src={selectedProduct.image}
                   alt={selectedProduct.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="space-y-4">

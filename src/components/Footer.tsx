@@ -5,12 +5,25 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Trust Seals Banner */}
-        <div className="mb-12 flex justify-center">
+        <div className="mb-8 flex justify-center">
           <img 
             src={trustSeals} 
             alt="Verdona compliance certifications: FDACS Hemp Licensed, COA Certified, ISO 9001, cbdMD and Remederi brands" 
-            className="max-w-4xl w-full h-auto rounded-lg"
+            className="max-w-4xl w-full h-auto"
           />
+        </div>
+
+        {/* Brand Logos Section */}
+        <div className="mb-12 flex justify-center gap-12 items-center flex-wrap">
+          <div className="text-center space-y-2">
+            <p className="text-sm text-primary-foreground/70">Official Brands</p>
+            <div className="flex gap-8 items-center justify-center">
+              {/* Placeholder for Remederi logo */}
+              <div className="text-2xl font-bold text-primary-foreground/90">REMEDERI</div>
+              {/* Placeholder for cbdMD logo */}
+              <div className="text-2xl font-bold text-primary-foreground/90">cbdMD</div>
+            </div>
+          </div>
         </div>
         
         {/* Main Footer Content */}
