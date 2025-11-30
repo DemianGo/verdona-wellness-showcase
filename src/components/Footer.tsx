@@ -1,4 +1,4 @@
-import trustSeals from "@/assets/trust-seals-banner.png";
+import trustSeals from "@/assets/trust-seals-banner.jpg";
 
 export const Footer = () => {
   return (
