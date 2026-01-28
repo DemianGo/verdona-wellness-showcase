@@ -56,11 +56,11 @@
           });
     
           // Ajusta grid para 2 colunas
-          const gridContainer = document.querySelector('.grid');
-          if (gridContainer) {
-            gridContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
-            gridContainer.style.gap = '2rem';
-          }
+          const footer = document.querySelector('footer');
+          const gridDivs = footer.querySelectorAll('div[class*="grid"]');
+          gridDivs.forEach(div => {
+            div.style.gridTemplateColumns = 'repeat(2, 1fr)';
+          });
         }, 1000);
       });
     </script>
