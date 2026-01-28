@@ -53,6 +53,13 @@
               h5.parentElement.remove();
             }
           });
+    
+          // Ajusta grid para 2 colunas
+          const gridContainer = document.querySelector('.grid');
+          if (gridContainer) {
+            gridContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            gridContainer.style.gap = '2rem';
+          }
         }, 1000);
       });
     </script>
