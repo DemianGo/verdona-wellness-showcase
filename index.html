@@ -27,5 +27,24 @@
 
   <body>
     <div id="root"></div>
+
+
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const buttons = document.querySelectorAll('a[href*="#"]');
+          buttons.forEach((btn, i) => {
+            if (i < 4 && btn.textContent.includes('Learn')) {
+              const coaBtn = btn.cloneNode(true);
+              coaBtn.textContent = 'View COA';
+              coaBtn.href = `/downloads/coa${i+1}.pdf`;
+              coaBtn.target = '_blank';
+              btn.parentNode.appendChild(coaBtn);
+            }
+          });
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
+
