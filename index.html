@@ -40,9 +40,10 @@
               coaBtn.href = `/downloads/coa${i}.pdf`;
               coaBtn.target = '_blank';
               coaBtn.className = btn.className;
-              coaBtn.style.display = 'inline-block';
-              coaBtn.style.marginLeft = '10px';
-              btn.parentNode.insertBefore(coaBtn, btn.nextSibling);
+              coaBtn.style.display = 'block';
+              coaBtn.style.marginTop = '10px';
+              coaBtn.style.textAlign = 'center';
+              btn.parentNode.appendChild(coaBtn);
             }
           });
         }, 1000);
