@@ -32,14 +32,17 @@
     <script>
       window.addEventListener('load', () => {
         setTimeout(() => {
-          const buttons = document.querySelectorAll('a[href*="#"]');
+          const buttons = document.querySelectorAll('button');
           buttons.forEach((btn, i) => {
-            if (i < 4 && btn.textContent.includes('Learn')) {
-              const coaBtn = btn.cloneNode(true);
+            if (i >= 1 && i <= 4 && btn.textContent.includes('Learn')) {
+              const coaBtn = document.createElement('a');
               coaBtn.textContent = 'View COA';
-              coaBtn.href = `/downloads/coa${i+1}.pdf`;
+              coaBtn.href = `/downloads/coa${i}.pdf`;
               coaBtn.target = '_blank';
-              btn.parentNode.appendChild(coaBtn);
+              coaBtn.className = btn.className;
+              coaBtn.style.display = 'inline-block';
+              coaBtn.style.marginLeft = '10px';
+              btn.parentNode.insertBefore(coaBtn, btn.nextSibling);
             }
           });
         }, 1000);
@@ -47,4 +50,3 @@
     </script>
   </body>
 </html>
-
