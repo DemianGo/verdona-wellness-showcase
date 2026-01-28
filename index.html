@@ -23,19 +23,15 @@
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     <script type="module" crossorigin src="/assets/index-b-PGzVcI.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BF-_G-Nj.css">
-
-
-
-
   </head>
 
   <body>
     <div id="root"></div>
 
-
     <script>
       window.addEventListener('load', () => {
         setTimeout(() => {
+          // Botões COA
           const buttons = document.querySelectorAll('button');
           buttons.forEach((btn, i) => {
             if (i >= 1 && i <= 4 && btn.textContent.includes('Learn')) {
@@ -50,37 +46,15 @@
               btn.parentNode.appendChild(coaBtn);
             }
           });
+    
+          // Remove Registered Agent
+          document.querySelectorAll('h5').forEach(h5 => {
+            if (h5.textContent.includes('Registered Agent')) {
+              h5.parentElement.remove();
+            }
+          });
         }, 1000);
       });
-
-
-
-      window.addEventListener('load', () => {
-    setTimeout(() => {
-      // Código dos botões COA (mantém o que já tem)
-      const buttons = document.querySelectorAll('button');
-      buttons.forEach((btn, i) => {
-        if (i >= 1 && i <= 4 && btn.textContent.includes('Learn')) {
-          const coaBtn = document.createElement('a');
-          coaBtn.textContent = 'View COA';
-          coaBtn.href = `/downloads/coa${i}.pdf`;
-          coaBtn.target = '_blank';
-          coaBtn.className = btn.className;
-          coaBtn.style.display = 'block';
-          coaBtn.style.marginTop = '10px';
-          coaBtn.style.textAlign = 'center';
-          btn.parentNode.appendChild(coaBtn);
-        }
-      });
-
-      // Remove Registered Agent
-      document.querySelectorAll('h3').forEach(h3 => {
-        if (h3.textContent.includes('Registered Agent')) {
-          h3.parentElement.remove();
-        }
-      });
-    }, 1000);
-  });
     </script>
   </body>
 </html>
